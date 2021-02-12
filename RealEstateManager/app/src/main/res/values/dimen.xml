@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!-- Estate form : for screen tablet sw600dp - 7" and up-->
+    <dimen name="size_edit_text">17sp</dimen>
+    <dimen name="size_checkbox_text">17sp</dimen>
+    <dimen name="size_date">19sp</dimen>
+    <!-- fragment list item : for screen tablet sw600dp - 7" and up-->
+    <dimen name="size_textView_Estate">28sp</dimen>
+    <dimen name="size_textView_City">22sp</dimen>
+    <dimen name="size_textView_price">28sp</dimen>
+</resources>

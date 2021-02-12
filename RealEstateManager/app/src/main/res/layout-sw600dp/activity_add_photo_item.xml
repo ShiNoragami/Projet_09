@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_add_photo"
+    android:layout_width="120dp"
+    android:layout_height="90dp"
+    android:orientation="horizontal"
+    android:paddingHorizontal="20dp"
+    app:cardPreventCornerOverlap="false"
+    app:strokeColor="@color/colorPrimaryDark"
+    app:strokeWidth="3dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/photo_image"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:scaleType="centerCrop"
+            app:shapeAppearance="?attr/shapeAppearanceMediumComponent"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.Card.Media">
+
+        </com.google.android.material.imageview.ShapeableImageView>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/delete_image"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:background="@drawable/delete">
+
+        </androidx.appcompat.widget.AppCompatImageView>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/photo_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginEnd="4dp"
+            android:background="#1D6200EE"
+            android:hint="Description"
+            android:textColor="#000000"
+            android:textSize="17sp"
+            android:textStyle="italic|bold" />
+
+    </RelativeLayout>
+
+</com.google.android.material.card.MaterialCardView>

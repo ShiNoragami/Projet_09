@@ -1,3 +1,54 @@
 <resources>
     <string name="app_name">Real Estate Manager</string>
+    <string name="network">No network</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string-array name="ESTATES">
+        <item>House</item>
+        <item>Flat</item>
+        <item>Duplex</item>
+        <item>Penthouse</item>
+    </string-array>
+
+    <string-array name="ROOMS">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5 et +</item>
+    </string-array>
+
+    <string-array name="BEDROOMS">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5 et +</item>
+    </string-array>
+
+    <string-array name="BATHROOMS">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4 et +</item>
+    </string-array>
+
+    <string-array name="AGENT">
+        <item>Boyer Donavan</item>
+        <item>Plaza Sylvain</item>
+        <item>Agentia Immobilia</item>
+    </string-array>
+
+    <string-array name="DESCRIPTION">
+        <item>Kitchen</item>
+        <item>Living Room</item>
+        <item>Bedroom</item>
+        <item>Bathroom</item>
+        <item>Garden</item>
+
+    </string-array>
+
 </resources>

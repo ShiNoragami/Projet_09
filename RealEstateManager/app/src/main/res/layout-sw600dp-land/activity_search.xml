@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.searchPage.SearchActivity">
+
+    <RelativeLayout
+        android:id="@+id/relative_layout_form"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            layout="@layout/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_estate"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginEnd="20dp"
+            app:boxStrokeColor="@color/colorAccent">
+
+            <AutoCompleteTextView
+                android:id="@+id/et_Estate"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:clickable="false"
+                android:focusable="true"
+                android:focusableInTouchMode="false"
+                android:hint="Estate Type"
+                android:inputType="none"
+                android:paddingBottom="8dp"
+                android:textSize="12sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_city"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/input_estate"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="20dp"
+            app:boxStrokeColor="@color/colorAccent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="City"
+                android:inputType="textAutoCorrect"
+                android:paddingBottom="8sp"
+                android:singleLine="true"
+                android:textSize="12sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_RoomsMin"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/input_city"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            app:boxStrokeColor="@color/colorAccent"
+            app:suffixTextColor="#000000">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_roomsMin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Min Rooms"
+                android:inputType="number"
+                android:paddingBottom="8dp"
+                android:singleLine="true"
+                android:textSize="12sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_RoomsMax"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/input_city"
+            android:layout_marginStart="90dp"
+            android:layout_marginTop="15dp"
+            android:layout_toEndOf="@+id/input_RoomsMin"
+            app:boxStrokeColor="@color/colorAccent"
+            app:suffixTextColor="#000000">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_roomsMax"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Max Rooms"
+                android:inputType="number"
+                android:paddingBottom="8dp"
+                android:singleLine="true"
+                android:textSize="12sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_SurfaceMin"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/input_RoomsMin"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            app:boxStrokeColor="@color/colorAccent"
+            app:suffixText="m²"
+            app:suffixTextColor="#000000">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_surfaceMini"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Min Surface"
+                android:inputType="number"
+                android:paddingBottom="8dp"
+                android:singleLine="true"
+                android:textSize="12sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_SurfaceMax"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/input_RoomsMax"
+            android:layout_marginStart="90dp"
+            android:layout_marginTop="15dp"
+            android:layout_toEndOf="@+id/input_SurfaceMin"
+            app:boxStrokeColor="@color/colorAccent"
+            app:suffixText="m²"
+            app:suffixTextColor="#000000">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_surfaceMaxi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Max Surface"
+                android:inputType="number"
+                android:paddingBottom="8dp"
+                android:singleLine="true"
+                android:textSize="12sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_PriceMin"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/input_SurfaceMin"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            app:boxStrokeColor="@color/colorAccent"
+            app:suffixText="$"
+            app:suffixTextColor="#000000">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_priceMini"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Min Price"
+                android:inputType="numberDecimal"
+                android:paddingBottom="8dp"
+                android:singleLine="true"
+                android:textSize="12sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_PriceMax"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/input_SurfaceMax"
+            android:layout_marginStart="90dp"
+            android:layout_marginTop="15dp"
+            android:layout_toEndOf="@+id/input_SurfaceMin"
+            app:boxStrokeColor="@color/colorAccent"
+            app:suffixText="$"
+            app:suffixTextColor="#000000">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_priceMaxi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Max Price"
+                android:inputType="numberDecimal"
+                android:paddingBottom="8dp"
+                android:singleLine="true"
+                android:textSize="12sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_upOfSaleDateMini"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/input_PriceMin"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            app:boxStrokeColor="@color/colorAccent"
+            app:startIconDrawable="@drawable/baseline_date_range_black_48dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_upOfSaleDateMini"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusableInTouchMode="false"
+                android:hint="Min Up of sale Date"
+                android:inputType="date"
+                android:paddingBottom="8dp"
+                android:singleLine="true"
+                android:textSize="12sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_upOfSaleDateMax"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/input_PriceMax"
+            android:layout_marginStart="90dp"
+            android:layout_marginTop="15dp"
+            android:layout_toEndOf="@+id/input_PriceMin"
+            app:boxStrokeColor="@color/colorAccent"
+            app:startIconDrawable="@drawable/baseline_date_range_black_48dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_upOfSaleDateMaxi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusableInTouchMode="false"
+                android:hint="Max Up of Sale Date"
+                android:inputType="date"
+                android:paddingBottom="8dp"
+                android:singleLine="true"
+                android:textSize="12sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/withPhoto"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/input_city"
+            android:layout_toEndOf="@+id/input_RoomsMax"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="30dp"
+            android:text="With photos ? :"
+            android:textColor="@color/colorPrimary"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/photos_box"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/input_city"
+            android:layout_toEndOf="@+id/input_RoomsMax"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="13dp"
+            android:buttonTint="@color/colorPrimary"
+            android:text="Photos"
+            android:textSize="12sp" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_nearby_points"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/withPhoto"
+            android:layout_toEndOf="@+id/input_RoomsMax"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="30dp"
+            android:text="Nearby points interests :"
+            android:textColor="@color/colorPrimary"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/box_schools"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_nearby_points"
+            android:layout_toEndOf="@+id/input_SurfaceMax"
+            android:layout_marginStart="50dp"
+            android:buttonTint="@color/colorPrimary"
+            android:text="Schools"
+            android:textSize="12sp" />
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/box_stores"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_nearby_points"
+            android:layout_toEndOf="@+id/box_schools"
+            android:layout_marginStart="20dp"
+            android:buttonTint="@color/colorPrimary"
+            android:text="Stores"
+            android:textSize="12sp" />
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/box_park"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_nearby_points"
+            android:layout_toEndOf="@+id/box_stores"
+            android:layout_marginStart="20dp"
+            android:buttonTint="@color/colorPrimary"
+            android:text="Park"
+            android:textSize="12sp" />
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/box_restaurants"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_nearby_points"
+            android:layout_toEndOf="@+id/box_park"
+            android:layout_marginStart="20dp"
+            android:buttonTint="@color/colorPrimary"
+            android:text="Restaurants"
+            android:textSize="12sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/estateStatus"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/box_schools"
+            android:layout_toEndOf="@+id/input_PriceMax"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="30dp"
+            android:text="Estate status :"
+            android:textColor="@color/colorPrimary"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/available_box"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/box_schools"
+            android:layout_toEndOf="@+id/estateStatus"
+            android:layout_marginTop="18dp"
+            android:layout_marginStart="20dp"
+            android:buttonTint="@color/colorPrimary"
+            android:text="Sold"
+            android:textSize="12sp" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/validate_fab_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="15dp"
+            android:clickable="true"
+            android:contentDescription="validate_btn"
+            android:elevation="15dp"
+            android:focusable="true"
+            android:src="@drawable/baseline_done_black_24dp"
+            app:fabSize="normal"
+            app:rippleColor="@color/colorAccent" />
+
+    </RelativeLayout>
+</ScrollView>

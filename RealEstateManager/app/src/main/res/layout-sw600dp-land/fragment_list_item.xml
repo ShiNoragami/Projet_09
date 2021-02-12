@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:elevation="7dp"
+    android:orientation="horizontal"
+    android:padding="20dp"
+    app:cardBackgroundColor="#E2E3DD"
+    app:cardCornerRadius="10dp">
+
+    <RelativeLayout
+        android:id="@+id/fragment_list_item"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:scaleType="centerCrop">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/list_photo"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:contentDescription="homePhoto"
+            android:scaleType="center" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/estateType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/list_photo"
+            android:gravity="top"
+            android:textAllCaps="true"
+            android:textColor="#711515"
+            android:textSize="@dimen/size_textView_Estate"
+            android:textStyle="bold|italic" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/City"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/estateType"
+            android:layout_marginStart="30dp"
+            android:layout_toEndOf="@+id/list_photo"
+            android:textAllCaps="true"
+            android:textSize="@dimen/size_textView_City"
+            android:textStyle="italic" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/City"
+            android:layout_marginStart="30dp"
+            android:layout_toEndOf="@+id/list_photo"
+            android:textColor="#000000"
+            android:textSize="@dimen/size_textView_price"
+            android:textStyle="italic|bold" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/list_photo_sold"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="30dp"
+
+            android:layout_toEndOf="@+id/estateType"
+            android:contentDescription="soldPhoto"
+            android:scaleType="center" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
