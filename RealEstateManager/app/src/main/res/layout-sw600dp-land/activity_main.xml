@@ -12,34 +12,54 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
-    <ScrollView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="?attr/actionBarSize"
-        android:fillViewport="false">
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="?attr/actionBarSize">
 
-        <LinearLayout
+        <ScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="?attr/actionBarSize"
-            android:baselineAligned="false"
-            android:orientation="horizontal">
+            android:fillViewport="false"
+            android:layout_weight="3">
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
 
-            <FrameLayout
-                android:id="@+id/list_fragment_frameLayout"
-                android:layout_width="0px"
-                android:layout_height="match_parent"
-                android:layout_weight="40" />
+                <FrameLayout
+                    android:id="@+id/list_fragment_frameLayout"
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="40" />
 
-            <FrameLayout
-                android:id="@+id/detail_fragment_frameLayout"
-                android:layout_width="0px"
-                android:layout_height="match_parent"
-                android:layout_weight="50" />
+            </LinearLayout>
+        </ScrollView>
 
-        </LinearLayout>
-    </ScrollView>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="false"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:id="@+id/detail_fragment_frameLayout"
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="50" />
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab_btn"

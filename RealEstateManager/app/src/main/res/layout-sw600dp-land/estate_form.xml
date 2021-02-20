@@ -23,7 +23,8 @@
             app:boxStrokeColor="@color/colorAccent"
             app:errorEnabled="true"
             app:helperText="Required"
-            app:helperTextEnabled="true">
+            app:helperTextEnabled="true"
+            >
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_Mandate"
@@ -228,9 +229,10 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:layout_below="@+id/input_ground"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="345dp"
+            android:layout_marginTop="12dp"
             android:layout_marginEnd="20dp"
             app:boxStrokeColor="@color/colorAccent"
             app:counterEnabled="true"
@@ -335,9 +337,10 @@
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tv_nearby_points"
             android:layout_width="200dp"
+            android:layout_below="@+id/input_description"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="510dp"
+            android:layout_marginTop="12dp"
             android:text="Nearby points interests :"
             android:textColor="@color/colorPrimary"
             android:textSize="@dimen/size_checkbox_text"
@@ -346,9 +349,10 @@
         <com.google.android.material.checkbox.MaterialCheckBox
             android:id="@+id/box_schools"
             android:layout_width="wrap_content"
+            android:layout_below="@+id/tv_nearby_points"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="530dp"
+
             android:buttonTint="@color/colorPrimary"
             android:text="Schools"
             android:textSize="@dimen/size_checkbox_text" />
@@ -358,7 +362,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="110dp"
-            android:layout_marginTop="530dp"
+            android:layout_below="@+id/tv_nearby_points"
             android:buttonTint="@color/colorPrimary"
             android:text="Stores"
             android:textSize="@dimen/size_checkbox_text" />
@@ -368,7 +372,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="190dp"
-            android:layout_marginTop="530dp"
+            android:layout_below="@+id/tv_nearby_points"
             android:buttonTint="@color/colorPrimary"
             android:text="Park"
             android:textSize="@dimen/size_checkbox_text" />
@@ -378,7 +382,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="265dp"
-            android:layout_marginTop="530dp"
+            android:layout_below="@+id/tv_nearby_points"
             android:buttonTint="@color/colorPrimary"
             android:text="Restaurants"
             android:textSize="@dimen/size_checkbox_text" />
@@ -388,7 +392,7 @@
             android:layout_width="110dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="600dp"
+            android:layout_below="@+id/box_schools"
 
             android:text="Estate status :"
             android:textColor="@color/colorPrimary"
@@ -400,7 +404,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="586dp"
+            android:layout_below="@+id/box_stores"
             android:layout_toEndOf="@+id/status"
             android:buttonTint="@color/colorPrimary"
             android:text="Sold"
@@ -466,7 +470,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="630dp"
+            android:layout_below="@+id/available_radiobtn"
             android:layout_marginEnd="20dp"
             app:boxStrokeColor="@color/colorAccent"
             app:errorEnabled="true"
@@ -491,7 +495,7 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginStart="30dp"
-            android:layout_marginTop="720dp"
+            android:layout_below="@id/input_agent"
             android:background="@drawable/baseline_add_a_photo_black_48dp" />
 
         <androidx.recyclerview.widget.RecyclerView
@@ -499,24 +503,25 @@
             android:layout_width="match_parent"
             android:layout_height="110dp"
             android:layout_marginStart="90dp"
-            android:layout_marginTop="700dp"
+            android:layout_below="@id/input_agent"
             android:layout_marginEnd="20dp" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/camera_btn"
             android:layout_width="30dp"
             android:layout_height="30dp"
+            android:layout_marginTop="12dp"
             android:layout_marginStart="30dp"
-            android:layout_marginTop="850dp"
+            android:layout_below="@+id/rv_photo"
             android:background="@drawable/baseline_camera_black_48dp" />
 
         <FrameLayout
             android:layout_width="160dp"
             android:layout_height="110dp"
             android:layout_below="@+id/rv_photo"
-            android:layout_centerHorizontal="true"
-            android:layout_marginStart="180dp"
-            android:layout_marginTop="25dp">
+            android:layout_marginStart="90dp"
+            android:layout_marginTop="12dp"
+            >
 
             <VideoView
                 android:id="@+id/videoView"
@@ -529,8 +534,7 @@
             android:layout_width="160dp"
             android:layout_height="90dp"
             android:layout_below="@+id/rv_photo"
-            android:layout_centerHorizontal="true"
-            android:layout_marginStart="180dp"
+            android:layout_marginStart="90dp"
             android:layout_marginTop="25dp"
             android:background="@drawable/delete">
 
