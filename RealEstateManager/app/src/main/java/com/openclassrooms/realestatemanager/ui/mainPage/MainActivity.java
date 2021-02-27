@@ -3,12 +3,19 @@ package com.openclassrooms.realestatemanager.ui.mainPage;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.renderscript.ScriptGroup;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 
 import androidx.lifecycle.ViewModelProviders;
 
+import com.google.android.material.button.MaterialButton;
+import com.openclassrooms.realestatemanager.databinding.EstateFormBinding;
+import com.openclassrooms.realestatemanager.ui.listPage.ListAdapter;
+import com.openclassrooms.realestatemanager.utils.Utils;
 import com.google.android.material.snackbar.Snackbar;
 import com.openclassrooms.realestatemanager.R;
 import com.openclassrooms.realestatemanager.databinding.ActivityMainBinding;
@@ -24,6 +31,8 @@ import com.openclassrooms.realestatemanager.ui.listPage.ListFragment;
 import com.openclassrooms.realestatemanager.ui.mapPage.MapActivity;
 import com.openclassrooms.realestatemanager.ui.searchPage.SearchActivity;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -56,7 +65,6 @@ public class MainActivity extends BaseActivity {
     //    this.textViewQuantity.setText(quantity);
     //}
 
-
     private ActivityMainBinding binding;
     private ListFragment listFragment;
     private DetailFragment detailFragment;
@@ -65,6 +73,8 @@ public class MainActivity extends BaseActivity {
     private EstateViewModel estateViewModel;
     private long mandateNumberID;
     private long idEstate;
+    private ListAdapter mAdapter;
+    private List<Estate> estateList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -90,6 +100,7 @@ public class MainActivity extends BaseActivity {
     private void configureViewModel() {
         ViewModelFactory viewModelFactory = Injection.provideViewModelFactory(this);
         this.estateViewModel = ViewModelProviders.of(this, viewModelFactory).get(EstateViewModel.class);
+
     }
 
     /**
@@ -158,6 +169,8 @@ public class MainActivity extends BaseActivity {
                         super.onOptionsItemSelected(item);
         }
     }
+
+    private static final String TAG = "Convert Price";
 
     /**
      * For connecting fragment list

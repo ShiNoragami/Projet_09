@@ -27,14 +27,14 @@ public class Utils {
      * @param dollars
      * @return
      */
-    public static int convertDollarToEuro(int dollars) {
+    public static double convertDollarToEuro(double dollars) {
 
-        return (int) Math.round(dollars * 0.812);
+        return (double) Math.round(dollars * 0.812);
     }
 
     //convert euro to dollar
-    public static int convertEuroToDollar(int euros) {
-        return (int) Math.round(euros * 1.111);
+    public static double convertEuroToDollar(double euros) {
+        return (double) Math.round(euros * 1.111);
     }
 
     /**
